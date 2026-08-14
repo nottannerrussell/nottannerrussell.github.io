@@ -18,13 +18,68 @@
         </style>
     </head>
 
-    <body>
 
-        <!-- Inline, Internal, External -->
+            <section class="wrapper">
+        <div class="top">OMSharma</div>
+        <div class="bottom" aria-hidden="true">OMSharma</div>
+    </section>
 
-        <h1>This is my website</h1>
-        
-        <p>This is a paragraph</p>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background-color: black;
+            --text-color: hsl(0, 0%, 100%);
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .wrapper {
+            display: grid;
+            place-content: center;
+            background-color: var(--background-color);
+            min-height: 100vh;
+            font-family: "Oswald", sans-serif;
+            font-size:30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-color);
+        }
+
+        .wrapper>div {
+            grid-area: 1/1/-1/-1;
+        }
+
+        .top {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+        }
+
+        .bottom {
+            clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+            color: transparent;
+            background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+            background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            transform: translateX(-0.02em);
+        }
+    </style>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
         
     </body>
