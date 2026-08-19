@@ -9,6 +9,12 @@
     <meta name="description"
           content="Tis but a test">
 
+    <style>   
+      notification { 
+          position: fixed; top: 0; width: 100%; background-color: black; color: white; display: flex; justify-content: space-between; 
+    }
+  </style>
+
   </head>
 
 
@@ -22,6 +28,10 @@
 <div class="notification">
   <p>This is a test notification</p>
   <button>X</button>
+<script> document.querySelector("notification button").addeventlistener("click", function(){
+  document.queryselector("notification").remove();
+});
+  </script>
 </div>
 
 
