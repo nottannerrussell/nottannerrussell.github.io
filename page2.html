@@ -10,7 +10,7 @@
           content="Tis but a test">
 
     <style>   
-      notification { 
+      .notification { 
           position: fixed; top: 0; width: 100%; background-color: black; color: white; display: flex; justify-content: space-between; 
     }
   </style>
@@ -25,14 +25,15 @@
 <h1>This is a test header</h1>
 <p>This is a test sentence</p>
 
-<div class="notification">
+<div class=".notification">
   <p>This is a test notification</p>
   <button>X</button>
-<script> document.querySelector("notification button").addeventlistener("click", function(){
-  document.queryselector("notification").remove();
+  </div>
+<script> document.querySelector(".notification button").addEventListener("click", function(){
+  document.querySelector(".notification").remove();
 });
   </script>
-</div>
+
 
 
     
