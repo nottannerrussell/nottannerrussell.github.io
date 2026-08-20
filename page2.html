@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HTML/CSS Testing v8</title>
+    <title>HTML/CSS Testing v9</title>
 
     <meta name="description"
           content="Tis but a test">
 
-    <style>   
-      .notification { 
-            position: fixed;
-            top: 0;
-            display: inline-block;
-            background: black;
-            color: white;
-            padding: 50px 25px;
-            border-radius: 10px;
-            font-weight: bold;
-      }
-  </style>
+ <style>
+    .notification {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #486581;
+    color: white;
+    padding: 20px 25px;
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+.notification button {
+    margin-left: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+</style>
      <!--   <style>   
       .notification { 
           position: fixed; top: 0; width: 50%; background-color: #1f3a4d; color: white; display: flex; justify-content: space-between; font-family: Arial, Helvetica, sans-serif; justify-content: center;
@@ -39,7 +54,7 @@
 <p>This is a test sentence</p>
 
 <div class="notification">
-  <p>There are links within the information below, Please click them as needed to gain more details.     </p>
+  <span>There are links within the information below, Please click them as needed to gain more details.</span>
   <button>X</button>
   </div>
 <script> document.querySelector(".notification button").addEventListener("click", function(){
