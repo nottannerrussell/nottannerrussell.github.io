@@ -398,10 +398,42 @@
                 display: none;
             }
         }
+     /* == Style for top of notificaiton ==*/
+            .notification {
+                position: fixed;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                background: #486581;
+                color: white;
+                padding: 20px 25px;
+                border-radius: 10px;
+
+                font-weight: bold;
+            }
+
+            .notification button {
+                margin-left: 20px;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 20px;
+                cursor: pointer;
+            }
     </style>
 </head>
 
 <body>
+
+    <div class="notification">
+  <span>There are links within the information below, Please click them as needed to gain more details.</span>
+  <button>X</button>
+  </div>
 
 <!-- =========================
      HEADER
@@ -1036,6 +1068,10 @@
 
 </footer>
 
+<script> document.querySelector(".notification button").addEventListener("click", function(){
+  document.querySelector(".notification").remove();
+});
+  </script>
 
 </body>
 </html>
