@@ -377,7 +377,7 @@
      /* ========             Style for top of notificaiton     =======*/
             .notification {
                 position: fixed;
-                bottom: 0;
+                top: 0;
                 left: 50%;
                 transform: translateX(-50%);
 
@@ -389,8 +389,9 @@
                 color: white;
                 padding: 20px 25px;
                 border-radius: 10px;
-
                 font-weight: bold;
+
+                z-index: 9999;
             }
 
             .notification button {
